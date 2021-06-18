@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Jun 18 19:22:36 UTC 2021
+   Time                   Fri Jun 18 19:33:51 UTC 2021
    Common Schema          [PDS4_PDS_1F00.xsd]
    Common Schematron      [PDS4_PDS_1F00.sch]
    IM Version Id:         1.15.0.0
@@ -31,7 +31,7 @@ Parameters:
 Summary:
    Classes                78
    Attributes             205
-   Associations           418
+   Associations           420
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -1463,6 +1463,16 @@ Parsed Input - Classes:
       reference type        component_of
 
       local identifier      Spatial_Filter
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      StarPixel_Flexible_Parameters
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      StarPixel_Lossless_Parameters
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of

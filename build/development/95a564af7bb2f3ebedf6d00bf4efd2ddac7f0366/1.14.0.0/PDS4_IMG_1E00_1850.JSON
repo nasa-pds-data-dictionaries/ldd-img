@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.14.0.0" ,
       "LDD Version": "1.8.5.0" ,
-      "Date": "Fri Jun 18 19:22:30 UTC 2021" ,
+      "Date": "Fri Jun 18 19:33:54 UTC 2021" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "img:"] ,
       "classDictionary": [
@@ -5581,6 +5581,38 @@
               }
             }
            , {"association": {
+                "identifier": "0001_NASA_PDS_1.img.Imaging.img.StarPixel_Flexible_Parameters" ,
+                "title": "StarPixel_Flexible_Parameters" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1290" ,
+                "classId": [
+                  "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.img.Imaging.img.StarPixel_Lossless_Parameters" ,
+                "title": "StarPixel_Lossless_Parameters" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1300" ,
+                "classId": [
+                  "0001_NASA_PDS_1.img.StarPixel_Lossless_Parameters"
+                 ]
+              }
+            }
+           , {"association": {
                 "identifier": "0001_NASA_PDS_1.img.Imaging.img.Subframe" ,
                 "title": "Subframe" ,
                 "assocType": "component_of" ,
@@ -5590,7 +5622,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1290" ,
+                "classOrder": "1310" ,
                 "classId": [
                   "0001_NASA_PDS_1.img.Subframe"
                  ]
@@ -5606,7 +5638,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "*" ,
-                "classOrder": "1300" ,
+                "classOrder": "1320" ,
                 "classId": [
                   "0001_NASA_PDS_1.img.Tiling"
                  ]
@@ -5622,7 +5654,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1310" ,
+                "classOrder": "1330" ,
                 "classId": [
                   "0001_NASA_PDS_1.img.Thumbnail"
                  ]
@@ -5638,7 +5670,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1320" ,
+                "classOrder": "1340" ,
                 "classId": [
                   "0001_NASA_PDS_1.img.Video"
                  ]
@@ -5654,7 +5686,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "*" ,
-                "classOrder": "1330" ,
+                "classOrder": "1350" ,
                 "classId": [
                   "0001_NASA_PDS_1.img.Instrument_State"
                  ]
@@ -5670,7 +5702,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1340" ,
+                "classOrder": "1360" ,
                 "classId": [
                   "0001_NASA_PDS_1.img.Commanded_Parameters"
                  ]
