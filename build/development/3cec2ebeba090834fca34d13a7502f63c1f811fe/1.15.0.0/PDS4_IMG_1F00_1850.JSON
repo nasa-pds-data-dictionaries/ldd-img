@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.15.0.0" ,
       "LDD Version": "1.8.5.0" ,
-      "Date": "Thu Jun 10 00:24:53 UTC 2021" ,
+      "Date": "Fri Jun 18 19:22:36 UTC 2021" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "img:"] ,
       "classDictionary": [
@@ -4672,6 +4672,22 @@
               }
             }
            , {"association": {
+                "identifier": "0001_NASA_PDS_1.img.Image_Compression_Segment.img.segment_corrupted_flag" ,
+                "title": "segment_corrupted_flag" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1080" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.img.Image_Compression_Segment.img.segment_corrupted_flag"
+                 ]
+              }
+            }
+           , {"association": {
                 "identifier": "0001_NASA_PDS_1.img.Image_Compression_Segment.img.missing_pixel_count" ,
                 "title": "missing_pixel_count" ,
                 "assocType": "attribute_of" ,
@@ -4681,7 +4697,7 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1080" ,
+                "classOrder": "1090" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.img.Image_Compression_Segment.img.missing_pixel_count"
                  ]
@@ -8104,6 +8120,116 @@
                 "classOrder": "1040" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.img.Special_Point.img.special_sample"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters" ,
+            "title": "StarPixel_Flexible_Parameters" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "img" ,
+            "steward": "img" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": " The StarPixel_Flexible_Parameters class contains attributes describing onboard compression parameters specific to StarPixel Flexible image compression. StarPixel Flexible is developed based on StarPixel Lossless and used by the JAXA's spacecraft, Hayabusa2. StarPixel Flexible is a lossy compression algorithm. "
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters.img.starpixel_initial_subsampling_interval" ,
+                "title": "starpixel_initial_subsampling_interval" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters.img.starpixel_initial_subsampling_interval"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters.img.starpixel_degradation" ,
+                "title": "starpixel_degradation" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters.img.starpixel_degradation"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters.img.Image_Compression_Segment" ,
+                "title": "Image_Compression_Segment" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "*" ,
+                "classOrder": "1030" ,
+                "classId": [
+                  "0001_NASA_PDS_1.img.Image_Compression_Segment"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.img.StarPixel_Lossless_Parameters" ,
+            "title": "StarPixel_Lossless_Parameters" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "img" ,
+            "steward": "img" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": " The StarPixel_Lossless_Parameters class contains attributes describing onboard compression parameters specific to StarPixel Lossless image compression. StarPixel Lossless is developed based on FELICS and used by the JAXA's spacecrafts, Akatsuki and Hayabusa2. StarPixel Lossless is a lossless compression algorithm and also known as HIREW. "
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.img.StarPixel_Lossless_Parameters.img.starpixel_initial_subsampling_interval" ,
+                "title": "starpixel_initial_subsampling_interval" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.img.StarPixel_Lossless_Parameters.img.starpixel_initial_subsampling_interval"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.img.StarPixel_Lossless_Parameters.img.Image_Compression_Segment" ,
+                "title": "Image_Compression_Segment" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "*" ,
+                "classOrder": "1020" ,
+                "classId": [
+                  "0001_NASA_PDS_1.img.Image_Compression_Segment"
                  ]
               }
             }
@@ -12068,6 +12194,31 @@
         }
       , {
           "attribute": {
+            "identifier": "0001_NASA_PDS_1.img.Image_Compression_Segment.img.segment_corrupted_flag" ,
+            "title": "segment_corrupted_flag" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "img" ,
+            "steward": "img" ,
+            "versionId": "1.15" ,
+            "description": "The segment_corrupted_flag specifies whether the segment is corrupted (or bad). Valid values are \"True\" or \"False\"." ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Boolean" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Boolean" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
             "identifier": "0001_NASA_PDS_1.img.Image_Compression_Segment.img.segment_number" ,
             "title": "segment_number" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
@@ -15137,6 +15288,81 @@
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
             "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters.img.starpixel_degradation" ,
+            "title": "starpixel_degradation" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "img" ,
+            "steward": "img" ,
+            "versionId": "1.15" ,
+            "description": " The value is degradation parameter. Then the value of the degradation parameter is higher, the quality of lossy compressed image will be worse, and the value is lower, the quality will be better. If value of degradation parameter is 0, there will is no degradation. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_NonNegative_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_NonNegative_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "32" ,
+            "pattern": "[0-9]+" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters.img.starpixel_initial_subsampling_interval" ,
+            "title": "starpixel_initial_subsampling_interval" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "img" ,
+            "steward": "img" ,
+            "versionId": "1.15" ,
+            "description": " The value gives exponent n for initial subsampling interval 2**n. See Takada+2007 (https:\/\/doi.org\/10.1109\/IGARSS.2007.4422835) for the detail. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_NonNegative_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_NonNegative_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "8" ,
+            "pattern": "[0-9]+" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.img.StarPixel_Lossless_Parameters.img.starpixel_initial_subsampling_interval" ,
+            "title": "starpixel_initial_subsampling_interval" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "img" ,
+            "steward": "img" ,
+            "versionId": "1.15" ,
+            "description": " The value gives exponent n for initial subsampling interval 2**n. See Takada+2007 (https:\/\/doi.org\/10.1109\/IGARSS.2007.4422835) for the detail. " ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_NonNegative_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_NonNegative_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "8" ,
+            "pattern": "[0-9]+" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,

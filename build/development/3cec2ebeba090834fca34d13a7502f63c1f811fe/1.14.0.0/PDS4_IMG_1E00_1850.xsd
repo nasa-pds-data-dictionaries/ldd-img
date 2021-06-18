@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:img  Version:1.8.5.0 - Thu Jun 10 00:24:53 UTC 2021 -->
+  <!-- PDS4 XML/Schema for Name Space Id:img  Version:1.8.5.0 - Fri Jun 18 19:22:30 UTC 2021 -->
   <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -168,7 +168,11 @@
     - Added "H.264 Frame" enumeration to onboard_compression_type
     - Updated definition to specify only unsigned integer are valid to have a sample_bit_mask (need to still add rule)
     - Updated definition for tile_num_bands
-    
+
+    1.8.6.0. T.Hare
+    - added StarPixel_Lossless_Parameters and StarPixel_Flexible_Parameters class and attributes:
+    starpixel_initial_subsampling_interval, starpixel_degradation segment_corrupted_flag, and two rules
+
   
     </xs:documentation>
   </xs:annotation>
@@ -1030,6 +1034,7 @@
       <xs:element name="samples" type="img:samples" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="segment_quality" type="img:segment_quality" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="segment_status" type="img:segment_status" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="segment_corrupted_flag" type="img:segment_corrupted_flag" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="missing_pixel_count" type="img:missing_pixel_count" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -1576,6 +1581,38 @@
       <xs:element name="description" type="pds:description" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="special_line" type="img:special_line" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="special_sample" type="img:special_sample" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StarPixel_Flexible_Parameters">
+    <xs:annotation>
+      <xs:documentation> The StarPixel_Flexible_Parameters class
+        contains attributes describing onboard compression parameters
+        specific to StarPixel Flexible image compression. StarPixel
+        Flexible is developed based on StarPixel Lossless and used by
+        the JAXA's spacecraft, Hayabusa2. StarPixel Flexible is a lossy
+        compression algorithm. </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="starpixel_initial_subsampling_interval" type="img:starpixel_initial_subsampling_interval" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="starpixel_degradation" type="img:starpixel_degradation" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Image_Compression_Segment" type="img:Image_Compression_Segment" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StarPixel_Lossless_Parameters">
+    <xs:annotation>
+      <xs:documentation> The StarPixel_Lossless_Parameters class
+        contains attributes describing onboard compression parameters
+        specific to StarPixel Lossless image compression. StarPixel
+        Lossless is developed based on FELICS and used by the JAXA's
+        spacecrafts, Akatsuki and Hayabusa2. StarPixel Lossless is a
+        lossless compression algorithm and also known as HIREW.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="starpixel_initial_subsampling_interval" type="img:starpixel_initial_subsampling_interval" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Image_Compression_Segment" type="img:Image_Compression_Segment" minOccurs="0" maxOccurs="unbounded"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -4163,6 +4200,16 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="segment_corrupted_flag">
+    <xs:annotation>
+      <xs:documentation>The segment_corrupted_flag specifies whether the
+        segment is corrupted (or bad). Valid values are "True" or
+        "False".</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Boolean">
+	   </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="segment_count">
     <xs:annotation>
       <xs:documentation> The segment_count attribute identifies the
@@ -4302,6 +4349,35 @@
     	<xs:pattern value='[0-9]+'/>
      <xs:minInclusive value="0"/>
      <xs:maxInclusive value="18446744073709551615"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="starpixel_degradation">
+    <xs:annotation>
+      <xs:documentation> The value is degradation parameter. Then the
+        value of the degradation parameter is higher, the quality of
+        lossy compressed image will be worse, and the value is lower,
+        the quality will be better. If value of degradation parameter is
+        0, there will is no degradation. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="32"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="starpixel_initial_subsampling_interval">
+    <xs:annotation>
+      <xs:documentation> The value gives exponent n for initial
+        subsampling interval 2**n. See Takada+2007
+        (https://doi.org/10.1109/IGARSS.2007.4422835) for the detail.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_NonNegative_Integer">
+    	<xs:pattern value='[0-9]+'/>
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="8"/>
 	   </xs:restriction>
   </xs:simpleType>
 
