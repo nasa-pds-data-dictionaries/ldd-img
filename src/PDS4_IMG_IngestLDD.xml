@@ -70,7 +70,6 @@
     
     1.7.1.0, T.Hare
     - Added filter
-    - Added GOP_Frames
     - Added atmospheric_opacity and atmospheric_opacity_reference under Radiometric_Correction class
     - Added detector_to_image_flip
     - Changed Flat_Field_Correction from 0:1 to 0:* (unbounded)
@@ -1684,9 +1683,13 @@
     <local_identifier>frame_index</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>The frame_index attribute specifies the sequence number of this frame in 
-      the context of the entire video, i.e. the first frame of the video would be 
-      index 1, up to frame_count.</definition>
+    <definition>When in a Video class, the frame_index attribute specifies the 
+      sequence number of this frame in the context of the entire video, 
+      i.e. the first frame of the video would be index 1, up to frame_count.
+      
+      When in a Focus_Stack class, the frame_index attribute specifies the 
+      index of the first frame used to make up the focus stack.
+    </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_NonNegative_Integer</value_data_type>
