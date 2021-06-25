@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Jun 25 22:39:10 UTC 2021
+   Time                   Fri Jun 25 23:06:22 UTC 2021
    Common Schema          [PDS4_PDS_1E00.xsd]
    Common Schematron      [PDS4_PDS_1E00.sch]
    IM Version Id:         1.14.0.0
@@ -1166,7 +1166,7 @@ Parsed Input - Attributes:
    name                   starpixel_degradation
    version                1.14
    value data type        ASCII_NonNegative_Integer
-   description             The value is degradation parameter. Then the value of the degradation parameter is higher, the quality of lossy compressed image will be worse, and the value is lower, the quality will be better. If value of degradation parameter is 0, there will is no degradation. 
+   description             The value is degradation parameter. Then the value of the degradation parameter is higher, the quality of lossy compressed image will be worse, and the value is lower, the quality will be better. If value of degradation parameter is 0, there will be no degradation. 
    minimum value          0
    maximum value          32
 
