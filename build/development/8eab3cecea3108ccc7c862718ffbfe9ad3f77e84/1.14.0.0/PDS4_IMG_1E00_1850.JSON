@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.14.0.0" ,
       "LDD Version": "1.8.5.0" ,
-      "Date": "Fri Jun 25 22:29:01 UTC 2021" ,
+      "Date": "Fri Jun 25 22:31:11 UTC 2021" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "img:"] ,
       "classDictionary": [
@@ -6502,7 +6502,9 @@
                   "0001_NASA_PDS_1.img.ICER_Parameters",
                   "0001_NASA_PDS_1.img.LOCO_Parameters",
                   "0001_NASA_PDS_1.img.JPEG_Parameters",
-                  "0001_NASA_PDS_1.img.JPEG_Progressive_Parameters"
+                  "0001_NASA_PDS_1.img.JPEG_Progressive_Parameters",
+                  "0001_NASA_PDS_1.img.StarPixel_Flexible_Parameters",
+                  "0001_NASA_PDS_1.img.StarPixel_Lossless_Parameters"
                  ]
               }
             }

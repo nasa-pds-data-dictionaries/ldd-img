@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:img  Version:1.8.5.0 - Fri Jun 25 22:29:01 UTC 2021 -->
+  <!-- PDS4 XML/Schema for Name Space Id:img  Version:1.8.5.0 - Fri Jun 25 22:31:11 UTC 2021 -->
   <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -1300,6 +1300,8 @@
         <xs:element name="LOCO_Parameters" type="img:LOCO_Parameters"> </xs:element>
         <xs:element name="JPEG_Parameters" type="img:JPEG_Parameters"> </xs:element>
         <xs:element name="JPEG_Progressive_Parameters" type="img:JPEG_Progressive_Parameters"> </xs:element>
+        <xs:element name="StarPixel_Flexible_Parameters" type="img:StarPixel_Flexible_Parameters"> </xs:element>
+        <xs:element name="StarPixel_Lossless_Parameters" type="img:StarPixel_Lossless_Parameters"> </xs:element>
       </xs:choice>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
