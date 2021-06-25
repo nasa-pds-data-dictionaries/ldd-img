@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Jun 25 22:31:16 UTC 2021
+   Time                   Fri Jun 25 22:39:14 UTC 2021
    Common Schema          [PDS4_PDS_1F00.xsd]
    Common Schematron      [PDS4_PDS_1F00.sch]
    IM Version Id:         1.15.0.0
@@ -99,7 +99,6 @@ Parsed Input - Header:
     
     1.7.1.0, T.Hare
     - Added filter
-    - Added GOP_Frames
     - Added atmospheric_opacity and atmospheric_opacity_reference under Radiometric_Correction class
     - Added detector_to_image_flip
     - Changed Flat_Field_Correction from 0:1 to 0:* (unbounded)
@@ -640,7 +639,7 @@ Parsed Input - Attributes:
    name                   frame_index
    version                1.15
    value data type        ASCII_NonNegative_Integer
-   description            The frame_index attribute specifies the sequence number of this frame in the context of the entire video, i.e. the first frame of the video would be index 1, up to frame_count.
+   description            When in a Video class, the frame_index attribute specifies the sequence number of this frame in the context of the entire video, i.e. the first frame of the video would be index 1, up to frame_count. When in a Focus_Stack class, the frame_index attribute specifies the index of the first frame used to make up the focus stack. 
 
    name                   frame_interval
    version                1.15
