@@ -3447,8 +3447,7 @@
       The value is degradation parameter. Then the value of the
       degradation parameter is higher, the quality of lossy compressed image
       will be worse, and the value is lower, the quality will be better.
-      If value of degradation parameter is 0, there will is no
-      degradation.
+      If value of degradation parameter is 0, there will be no degradation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
