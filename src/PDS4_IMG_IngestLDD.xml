@@ -3350,7 +3350,8 @@
     <local_identifier>segment_corrupted_flag</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Trent Hare</submitter_name>
-    <definition>The segment_corrupted_flag specifies whether the segment is corrupted (or bad). Valid values are "true" or "false".</definition>
+    <definition>The segment_corrupted_flag specifies whether the segment is corrupted (or bad). Valid values are "true" or "false".
+      If the value is true, the segment is corrupted, and if the value is false, the segment is not corrupted.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Boolean</value_data_type>
